@@ -1,0 +1,427 @@
+
+{% load static %}
+<!-- ctrl+n to create a new uname file in vscode -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>myworldakp</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.17/tailwind.min.css" />
+
+    <!-- style for popupwindow -->
+    <style>
+      .popup {
+        display: none;
+        border-radius: 12px;
+        position:absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background-color: rgb(96, 109, 255);
+        padding: 1rem;
+        border: 1px solid gray;
+        box-shadow: 0 2px 4px rgba(0,0,0,0.3);
+        z-index: 9999;
+      }
+      .popup1 {
+        display: none;
+        border-radius: 12px;
+        position:absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background-color: white;
+        padding: 1rem;
+        border: 1px solid gray;
+        box-shadow: 0 2px 4px rgba(0,0,0,0.3);
+        z-index: 9999;
+      }
+    </style>
+    <!-- style for popupwindow close -->
+
+</head>
+
+<body>
+{% include 'header.html' %}
+   
+       
+          <!-- signin form  -->
+          <div class="popup" id="popup">
+            <form class="max-w-md mx-auto my-8">
+              <h1 class="font-extrabold items-center px-8 mx-auto text-2xl text-purple-800">SignUp-To create and Account</h1>
+              <div class="mb-4">
+                <label class="block text-gray-700 font-bold mb-2" for="name">
+                  Name
+                </label>
+                <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="name" type="text" placeholder="Enter your name">
+              </div>
+              <div class="mb-4">
+                <label class="block text-gray-700 font-bold mb-2" for="mobile">
+                  Mobile Number
+                </label>
+                <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="mobile" type="text" placeholder="Enter your mobile number">
+              </div>
+              <div class="mb-4">
+                <label class="block text-gray-700 font-bold mb-2" for="dob">
+                  Date of Birth
+                </label>
+                <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="dob" type="date" placeholder="Enter your date of birth">
+              </div>
+              <div class="mb-4">
+                <label class="block text-gray-700 font-bold mb-2" for="email">
+                  Email
+                </label>
+                <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="email" type="email" placeholder="Enter your email address">
+              </div>
+              <div class="mb-4">
+                <label class="block text-gray-700 font-bold mb-2" for="skills">
+                  Your Skills
+                </label>
+                <textarea class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="skills" rows="3" placeholder="Enter your skills"></textarea>
+              </div>
+              <div class="flex items-center justify-between">
+                <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline" type="button">
+                  Sign Up
+                </button>
+              </div>
+            </form>  
+            <button class="mt-4 bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded" onclick="hidePopup()">Close</button>
+          </div>
+          <!-- script  -->
+          <script>
+            function signinform() {
+              document.getElementById("popup").style.display = "block";
+            }
+            function hidePopup() {
+              document.getElementById("popup").style.display = "none";
+            }
+            document.ancho
+          </script>
+          <!-- script close -->
+          <!-- sigin form close  -->
+          <!-- log in form   -->
+          <div class="popup1" id="popup1">
+            <form class="max-w-md mx-auto my-8">
+              <h1 class="font-extrabold items-center px-8 mx-auto text-2xl text-purple-800">SignUp-To create and Account</h1>
+              <div class="mb-4">
+                <label class="block text-gray-700 font-bold mb-2" for="name">
+                  Name
+                </label>
+                <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="name" type="text" placeholder="Enter your name">
+              </div>
+              <div class="mb-4">
+                <label class="block text-gray-700 font-bold mb-2" for="mobile">
+                  Mobile Number
+                </label>
+                <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="mobile" type="text" placeholder="Enter your mobile number">
+              </div>
+              <div class="mb-4">
+                <label class="block text-gray-700 font-bold mb-2" for="dob">
+                  Date of Birth
+                </label>
+                <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="dob" type="date" placeholder="Enter your date of birth">
+              </div>
+              <div class="mb-4">
+                <label class="block text-gray-700 font-bold mb-2" for="email">
+                  Email
+                </label>
+                <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="email" type="email" placeholder="Enter your email address">
+              </div>
+              <div class="mb-4">
+                <label class="block text-gray-700 font-bold mb-2" for="skills">
+                  Your Skills
+                </label>
+                <textarea class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="skills" rows="3" placeholder="Enter your skills"></textarea>
+              </div>
+              <div class="flex items-center justify-between">
+                <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline" type="button">
+                  Sign Up
+                </button>
+              </div>
+            </form>  
+            <button class="mt-4 bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded" onclick="hidePopup1()">Close</button>
+          </div>
+          <!-- script  -->
+          <script>
+            function loginform() {
+              document.getElementById("popup1").style.display = "block";
+            }
+            function hidePopup1() {
+              document.getElementById("popup1").style.display = "none";
+            }
+          </script>
+          <!-- script close -->
+
+          <!-- log in form closed  -->
+          
+          <!-- section 3 -->
+        <section class="bg-gray-100 py-12">
+          <div class="px-10 py-4 ">
+            <h1 class="font-extrabold">3)Various Courses</h1>
+          </div>
+
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+              <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+                <div class="bg-white p-4 rounded shadow-md">
+                  <a href="#">
+                    <img src={% static '/pexels-miguel-á-padriñán-343457 (1).jpg'%} alt="Image 1" class=" rounded-2xl w-full h-auto">
+                    <h3 class="text-gray-800 hover:text-purple-600 font-bold text-xl mt-2">Analog communication</h3>
+                  </a>
+                </div>
+                <div class="bg-white p-4 rounded shadow-md">
+                  <a href="#">
+                    <img src={% static '/operating system.jpg' %} alt="Image 2" class=" rounded-2xl w-full h-auto">
+                    <h3 class="text-gray-800 hover:text-purple-600 font-bold text-xl mt-2">Operating System</h3>
+                  </a>
+                </div>
+                <div class="bg-white p-4 rounded shadow-md">
+                  <a href="#">
+                    <img src={% static '/pexels-pixabay-39290 (1).jpg' %} alt="Image 3" class=" rounded-2xl w-full h-auto">
+                    <h3 class="text-gray-800 hover:text-purple-600 font-bold text-xl mt-2">Applied Electronics</h3>
+                  </a>
+                </div>
+                <div class="bg-white p-4 rounded shadow-md">
+                  <a href="#">
+                    <img src={% static '/pexels-pok-rie-1432675.jpg'%} alt="Image 4" class=" rounded-2xl w-full h-auto">
+                    <h3 class="text-gray-800 hover:text-purple-600 font-bold text-xl mt-2">Controls System</h3>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </section>
+          <!-- section 2 closed  -->
+          
+          <!-- section 4 -->
+        <section class="bg-gray-100 py-12">
+          <div class="px-10 py-4 ">
+            <h1 class="font-extrabold">4)Technology</h1>
+          </div>
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+              <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+                <div class="bg-white p-4 rounded shadow-md">
+                  <a href="#">
+                    <img src="{% static '/Technology.jpeg' %}" alt="Image 1" class=" rounded-2xl w-full h-auto">
+                    <h3 class="text-gray-800 hover:text-purple-600 font-bold text-xl mt-2">Technology</h3>
+                  </a>
+                </div>
+                <div class="bg-white p-4 rounded shadow-md">
+                  <a href="#">
+                    <img src={% static '/pexels-spacex-23789.jpg'%} alt=" Image 2" class=" rounded-2xl w-full h-auto">
+                    <h3 class="text-gray-800 hover:text-purple-600 font-bold text-xl mt-2">NASA</h3>
+                  </a>
+                </div>
+                <div class="bg-white p-4 rounded shadow-md">
+                  <a href="#">
+                    <img src={% static '/com graphics.jpg'%} alt="Image 3" class=" rounded-2xl w-full h-auto">
+                    <h3 class="text-gray-800 hover:text-purple-600 font-bold text-xl mt-2">Computer Graphics</h3>
+                  </a>
+                </div>
+                <div class="bg-white p-4 rounded shadow-md">
+                  <a href="/pdf's/Carbon Nanotubes .pdf" >
+                    <img src={% static '/javascript.jpg' %} alt="Image 4" class=" rounded-2xl w-full h-auto">
+                    <h3 class="text-gray-800 hover:text-purple-600 font-bold text-xl mt-2">Javascript</h3>
+                    <p><strong>Javascript -</strong> is the language of web browsers which help to build our websites responsive and functionable to the user......</p>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </section>
+          <!-- section 4 closed -->
+          <!-- section 5 -->
+        <section class="bg-gray-100 py-12">
+          <div class="px-10 py-4 ">
+            <h1 class="font-extrabold">5)MyProjects</h1>
+          </div>
+          <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+              <div class="bg-white p-4 rounded shadow-md">
+                <a href="#">
+                  <img src="{% static '/facerecognition.jpg' %}" alt="Image 1" class=" rounded-2xl w-full h-auto">
+                  <h3 class="text-gray-800 hover:text-purple-600 font-bold text-xl mt-2">Facerecognition~Project</h3>
+                </a>
+              </div>
+              <div class="bg-white p-4 rounded shadow-md">
+                <a href="#">
+                  <img src={% static '/deepLearning.jpg'%} alt=" Image 2" class=" rounded-2xl w-full h-auto">
+                  <h3 class="text-gray-800 hover:text-purple-600 font-bold text-xl mt-2">Deep learning</h3>
+                </a>
+              </div>
+              <div class="bg-white p-4 rounded shadow-md">
+                <a href="#">
+                  <img src={% static '/ai.jpg'%} alt="Image 3" class=" rounded-2xl w-full h-auto">
+                  <h3 class="text-gray-800 hover:text-purple-600 font-bold text-xl mt-2">AI</h3>
+                </a>
+              </div>
+              <div class="bg-white p-4 rounded shadow-md">
+                <a href="/pdf's/Carbon Nanotubes .pdf" >
+                  <img src={% static '/MATLAB.jpg' %} alt="Image 4" class=" rounded-2xl w-full h-auto">
+                  <h3 class="text-gray-800 hover:text-purple-600 font-bold text-xl mt-2">MATLAB</h3>
+                  <p><strong>Javascript -</strong> is the language of web browsers which help to build our websites responsive and functionable to the user......</p>
+                </a>
+              </div>
+            </div>
+          </div>
+        </section>
+        <!-- section 5 closed -->
+        <!-- section 6 -->
+        <section class="bg-gray-100 py-12">
+          <div class="px-10 py-4 ">
+            <h1 class="font-extrabold">6)Languages and Skills</h1>
+          </div>
+          <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+              <div class="bg-white p-4 rounded shadow-md">
+                <a href="#">
+                  <img src="{% static '/Technology.jpeg' %}" alt="Image 1" class=" rounded-2xl w-full h-auto">
+                  <h3 class="text-gray-800 hover:text-purple-600 font-bold text-xl mt-2">Android~kotlin</h3>
+                </a>
+              </div>
+              <div class="bg-white p-4 rounded shadow-md">
+                <a href="#">
+                  <img src={% static '/pexels-spacex-23789.jpg'%} alt=" Image 2" class=" rounded-2xl w-full h-auto">
+                  <h3 class="text-gray-800 hover:text-purple-600 font-bold text-xl mt-2">Google~Framework</h3>
+                </a>
+              </div>
+              <div class="bg-white p-4 rounded shadow-md">
+                <a href="#">
+                  <img src={% static '/com graphics.jpg'%} alt="Image 3" class=" rounded-2xl w-full h-auto">
+                  <h3 class="text-gray-800 hover:text-purple-600 font-bold text-xl mt-2">Digital Electronics</h3>
+                </a>
+              </div>
+              <div class="bg-white p-4 rounded shadow-md">
+                <a href="/pdf's/Carbon Nanotubes .pdf" >
+                  <img src={% static '/javascript.jpg' %} alt="Image 4" class=" rounded-2xl w-full h-auto">
+                  <h3 class="text-gray-800 hover:text-purple-600 font-bold text-xl mt-2">Javascript</h3>
+                  <p><strong>Javascript -</strong> is the language of web browsers which help to build our websites responsive and functionable to the user......</p>
+                </a>
+              </div>
+            </div>
+          </div>
+        </section>
+        <!-- section 6 closed -->
+        <!-- section 2 -->
+        <section class="bg-gray-100 py-12">
+          <div class="px-10 py-4 ">
+            <h1 class="font-extrabold">2)Various Courses</h1>
+          </div>
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+              <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+                <div class="bg-white p-4 rounded shadow-md">
+                  <a href="#">
+                    <img src={% static '/pexels-miguel-á-padriñán-343457 (1).jpg' %} alt="Image 1" class=" rounded-2xl w-full h-auto">
+                    <h3 class="text-gray-800 hover:text-purple-600 font-bold text-xl mt-2">Analog communication</h3>
+                  </a>
+                </div>
+                <div class="bg-white p-4 rounded shadow-md">
+                  <a href="#">
+                    <img src={% static '/amplifier.jpeg'%} alt="Image 2" class=" rounded-2xl w-full h-auto">
+                    <h3 class="text-gray-800 hover:text-purple-600 font-bold text-xl mt-2">Amplifier</h3>
+                  </a>
+                </div>
+                <div class="bg-white p-4 rounded shadow-md">
+                  <a href="#">
+                    <img src={% static '/pexels-pixabay-39290 (1).jpg'%} alt="Image 3" class=" rounded-2xl w-full h-auto">
+                    <h3 class="text-gray-800 hover:text-purple-600 font-bold text-xl mt-2">Arduino</h3>
+                  </a>
+                </div>
+                <div class="bg-white p-4 rounded shadow-md">
+                  <a href="#">
+                    <img src={% static '/pexels-pok-rie-1432675.jpg' %} alt="Image 4" class=" rounded-2xl w-full h-auto">
+                    <h3 class="text-gray-800 hover:text-purple-600 font-bold text-xl mt-2">Image 4 Title</h3>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </section>
+          <!-- section 2 closed  -->
+          <!-- section  1 -->
+        <section class="bg-gray-100 py-12"> 
+          <div class="px-10 py-4 ">
+            <h1 class="font-extrabold">1)Basics~projects with Theory</h1>
+          </div>
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+              <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+                <div class="bg-white p-4 rounded shadow-md">
+                  <a href="http://www.google.com" target="_blank">
+                    <img src="{% static '/resistor img.jpg' %}" alt="Image 1" class=" rounded-2xl w-full h-auto">
+                    <h3 class="text-gray-800 hover:text-purple-600 font-bold text-xl mt-2"><a href="http://www.google.com" target="_blank">Resistor</a></h3>
+                    <p>About resistor-resistors have very common functions that you know about it very well.......
+                      
+                    </p>
+                  </a>
+                </div>
+                <div class="bg-white p-4 rounded shadow-md">
+                  <a href="#">
+                    <img src="{% static '/transistor.jpg' %}" alt="Image 2" class=" rounded-2xl w-full h-auto">
+                    <h3 class="text-gray-800 hover:text-purple-600 font-bold text-xl mt-2">Transistor</h3>
+                  </a>
+                </div>
+                <div class="bg-white p-4 rounded shadow-md">
+                  <a href="#">
+                    <img src="{% static '/pexels-azamat-esenaliev-117729.jpg' %}" alt="Image 3" class=" rounded-2xl w-full h-auto">
+                    <h3 class="text-gray-800 hover:text-purple-600 font-bold text-xl mt-2 ">About Motors</h3>
+                    <p class="text-grey-800"> <strong>Imagine what a motor can do!!!</strong></p>
+                    <p>It not only convert electrical to rotatory motion </p>
+                    <p>But also.................</p>
+                    <p>Used as vibrator.....</p>
+                    <p>Generate Energy......</p>
+                    <p>Making of well performing devices..</p>
+                    <p>To create a pressure difference with help of some new device...</p>
+                    <p>Add more on it if you like or you know about</p>
+                    <p>Click on the photo above to know more about it...........</p>
+                  </a>
+                </div>
+                <div class="bg-white p-4 rounded shadow-md">
+                  <a href="#">
+                    <img src="{% static '/pexels-kindel-media-9028874.jpg' %}" alt="Image 4" class=" rounded-2xl w-full h-auto">
+                    <h3 class="text-gray-800 hover:text-purple-600 font-bold text-xl mt-2">Sensors</h3>
+                    <p>~Sensors are the devices which are used to  change from physical quantity to electrical Energy.......</p>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </section>
+          <!-- section1 closed  -->
+        <!-- section 7 -->
+        <section class="bg-gray-100 py-12">
+          <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+              <div class="bg-white p-4 rounded shadow-md">
+                <a href="#">
+                  <img src="{% static '/Technology.jpeg' %}" alt="Image 1" class=" rounded-2xl w-full h-auto">
+                  <h3 class="text-gray-800 hover:text-purple-600 font-bold text-xl mt-2">Application Programming interface~API</h3>
+                </a>
+              </div>
+              <div class="bg-white p-4 rounded shadow-md">
+                <a href="#">
+                  <img src={% static '/pexels-spacex-23789.jpg'%} alt=" Image 2" class=" rounded-2xl w-full h-auto">
+                  <h3 class="text-gray-800 hover:text-purple-600 font-bold text-xl mt-2">XML</h3>
+                </a>
+              </div>
+              <div class="bg-white p-4 rounded shadow-md">
+                <a href="#">
+                  <img src={% static '/com graphics.jpg'%} alt="Image 3" class=" rounded-2xl w-full h-auto">
+                  <h3 class="text-gray-800 hover:text-purple-600 font-bold text-xl mt-2">Data Structure</h3>
+                </a>
+              </div>
+              <div class="bg-white p-4 rounded shadow-md">
+                <a href="/pdf's/Carbon Nanotubes .pdf" >
+                  <img src={% static '/javascript.jpg' %} alt="Image 4" class=" rounded-2xl w-full h-auto">
+                  <h3 class="text-gray-800 hover:text-purple-600 font-bold text-xl mt-2">C and C++</h3>
+                  <p><strong>C and C++ -</strong> is the language of web browsers which help to build our websites responsive and functionable to the user......</p>
+                </a>
+              </div>
+            </div>
+          </div>
+        </section>
+        <!-- section 7 closed -->
+          {% include 'footer.html' %}
+   
+   
+</body>
+
+</html>

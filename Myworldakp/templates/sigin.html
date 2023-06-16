@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Myworldakp~Sign Up</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.17/tailwind.min.css" />
+    <style>
+		.popup {
+			display: none;
+			position: fixed;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+			background-color: white;
+			padding: 1rem;
+			border: 1px solid gray;
+			box-shadow: 0 2px 4px rgba(0,0,0,0.3);
+			z-index: 9999;
+		}
+	</style>
+</head>
+<body>
+    <form class="max-w-md mx-auto my-8">
+        <h1 class="font-extrabold items-center px-8 mx-auto text-2xl text-purple-800">SignUp-To create and Account</h1>
+        <div class="mb-4">
+          <label class="block text-gray-700 font-bold mb-2" for="name">
+            Name
+          </label>
+          <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="name" type="text" placeholder="Enter your name">
+        </div>
+        <div class="mb-4">
+          <label class="block text-gray-700 font-bold mb-2" for="mobile">
+            Mobile Number
+          </label>
+          <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="mobile" type="text" placeholder="Enter your mobile number">
+        </div>
+        <div class="mb-4">
+          <label class="block text-gray-700 font-bold mb-2" for="dob">
+            Date of Birth
+          </label>
+          <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="dob" type="date" placeholder="Enter your date of birth">
+        </div>
+        <div class="mb-4">
+          <label class="block text-gray-700 font-bold mb-2" for="email">
+            Email
+          </label>
+          <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="email" type="email" placeholder="Enter your email address">
+        </div>
+        <div class="mb-4">
+          <label class="block text-gray-700 font-bold mb-2" for="skills">
+            Your Skills
+          </label>
+          <textarea class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="skills" rows="3" placeholder="Enter your skills"></textarea>
+        </div>
+        <div class="flex items-center justify-between">
+          <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline" type="button">
+            Sign Up
+          </button>
+        </div>
+      </form>  
+
+
+	<div class="flex justify-center mt-10">
+		<button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded" onclick="showPopup()">Show Popup</button>
+	</div>
+	<div class="popup" id="popup">
+		<p class="text-lg font-semibold">This is a popup window!</p>
+		<p class="mt-2">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla nec finibus lectus, quis pharetra justo.</p>
+		<button class="mt-4 bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded" onclick="hidePopup()">Close</button>
+	</div>
+	<script>
+		function showPopup() {
+			document.getElementById("popup").style.display = "block";
+		}
+		function hidePopup() {
+			document.getElementById("popup").style.display = "none";
+		}
+	</script>
+
+
+</body>
+</html>
