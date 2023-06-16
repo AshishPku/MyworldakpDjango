@@ -1,0 +1,4 @@
+[[redirects]]
+from = "/*" 
+to = "/myworldakpHOME.html"
+status = 200
